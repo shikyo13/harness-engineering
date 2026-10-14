@@ -1,0 +1,64 @@
+{
+  "schema": "zero-harness-all-around-v1",
+  "status": "coverage_incomplete",
+  "model": "ARC4NUM/Qwen3.8-Flash-Next-Uncensored-MLX-Serve-4bit",
+  "machine": "Apple M4 Max, 128 GB, macOS 26.6.2",
+  "candidates": [
+    "pi-qwen",
+    "zero-code-qwen",
+    "opencode-qwen",
+    "aider-qwen",
+    "qwen-code"
+  ],
+  "weights": {
+    "coding": 0.35,
+    "speed": 0.15,
+    "context": 0.15,
+    "long_running": 0.15,
+    "tool_use": 0.1,
+    "recovery": 0.1
+  },
+  "dimensions": {
+    "coding": {
+      "pi-qwen": 0.9258,
+      "zero-code-qwen": 0.8715,
+      "opencode-qwen": 0.8642,
+      "aider-qwen": 0.8315,
+      "qwen-code": 0.7125
+    },
+    "speed": {
+      "aider-qwen": 0.7011,
+      "opencode-qwen": 0.0,
+      "pi-qwen": 1.0,
+      "qwen-code": 0.6687,
+      "zero-code-qwen": 0.7887
+    },
+    "context": {},
+    "long_running": {
+      "zero-code-qwen": 1.0,
+      "pi-qwen": 1.0,
+      "opencode-qwen": 1.0,
+      "qwen-code": 1.0,
+      "aider-qwen": 0.28
+    },
+    "tool_use": {},
+    "recovery": {}
+  },
+  "fixture_contract": {
+    "coding": "Pinned OpenBench task pack; external checker; three trials per candidate/task cell.",
+    "speed": "Same exact-answer and tool-turn probes; report TTFT, decode throughput, wall time, and provider usage.",
+    "context": "Same 16k, 64k, and long-prefix prompts; report fresh input, cache read, completion, and context-rotation correctness.",
+    "long_running": "Same multi-file project task, two fresh trials per candidate, hidden verifier, and clean process completion under a fixed wall budget. Score is mean hidden-checker score; timing remains in the separate speed dimension.",
+    "tool_use": "Same local browser fixture with an external verifier; tool errors, recovery, and artifact correctness are recorded.",
+    "recovery": "Interrupt at a controlled turn boundary, restart the same harness, resume the same task, and verify no duplicate or lost edits."
+  },
+  "coverage_rule": "A dimension is eligible only when every candidate has an equivalent runtime row. Missing rows remain missing and never become zero.",
+  "dimension_sources": {
+    "coding": "docs/evals/2026-09-17-scorecard.json#/dimensions/coding_openbench/composite_leaderboard",
+    "speed": "docs/evals/2026-09-17-native-speed-probe.json#/summary/*/speed_score",
+    "context_16k": "docs/evals/2026-09-17-context-probe.json#/summary/*",
+    "context_64k": "docs/evals/2026-09-17-context-64k-probe.json#/summary/*",
+    "long_running_taskflow": "docs/evals/2026-09-16-openbench-taskflow.json#/cells/*",
+    "long_running": "docs/evals/2026-09-17-taskflow-repeat.json#/repeat_evidence/summary/*/repeat/checker_score_mean"
+  }
+}

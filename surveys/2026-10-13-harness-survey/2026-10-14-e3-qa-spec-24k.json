@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-14",
+  "model": "mlx/qwen3.8-flash (ARC4NUM/Qwen3.8-Flash-Next-Uncensored-MLX-Serve-4bit)",
+  "engine": "mlx-serve 26.10.2\nmlx 0.32.3\nmlx-c 56b2d39fc831\nnax off (requires M5-class GPU)\nggml 0.26.0 (d81235049)\nllama.cpp b11429\ngguf 3\nds4 unknown at http://127.0.0.1:11234/v1",
+  "machine": "Apple M4 Max, 128 GB, macOS 26.6.2",
+  "branch": "long-horizon",
+  "commit": "480df4d6802ef6e608b9102dd405ef4606796c7b",
+  "dirty": true,
+  "speed": [],
+  "reasoning": [],
+  "tasks": [
+    {
+      "id": "long-qa-spec",
+      "kind": "long",
+      "effort": "medium",
+      "status": "timeout",
+      "wall_ms": 5400601,
+      "turns": 2,
+      "compactions": 72,
+      "sessionID": "ses_ec6e31934ffeSbL7SwbYMWe3oj",
+      "final_text": "",
+      "changed_files": [
+        "site/index.html",
+        "site/src/dates.js",
+        "site/src/filters.js",
+        "site/src/history.js",
+        "site/src/money.js",
+        "site/src/ui.js",
+        "test/dates.test.js",
+        "test/money.test.js",
+        "test/view.test.js",
+        "QA_REPORT.md",
+        "site/src/csv.js",
+        "test/history.test.js"
+      ],
+      "verify_tail": "      at TestContext.<anonymous> (file:///private/var/folders/d1/5cgbdtsx77g6qcptr17981cw0000gn/T/zero-eval/2026-10-14T06-32-35-203Z/long-qa-spec-verify/hidden/spec.hidden.test.js:338:12)\n      at Test.runInAsyncScope (node:async_hooks:226:14)\n      at Test.run (node:internal/test_runner/test:1201:25)\n      at Suite.processPendingSubtests (node:internal/test_runner/test:831:18)\n      at Test.postRun (node:internal/test_runner/test:1330:19)\n      at Test.run (node:internal/test_runner/test:1258:12)\n      at async Suite.processPendingSubtests (node:internal/test_runner/test:831:7) {\n    generatedMessage: true,\n    code: 'ERR_ASSERTION',\n    actual: [ 1, 3, 2, 4 ],\n    expected: [ 3, 2, 1, 4 ],\n    operator: 'deepStrictEqual',\n    diff: 'simple'\n  }\n\ntest at hidden/spec.hidden.test.js:348:3\n✖ sample data: equal amounts show the newer expense first (0.216958ms)\n  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n  + actual - expected\n  \n    [\n  +   'Movie ticket',\n      'Lunch with Sam',\n  -   'Movie ticket'\n    ]\n  \n      at TestContext.<anonymous> (file:///private/var/folders/d1/5cgbdtsx77g6qcptr17981cw0000gn/T/zero-eval/2026-10-14T06-32-35-203Z/long-qa-spec-verify/hidden/spec.hidden.test.js:351:12)\n      at Test.runInAsyncScope (node:async_hooks:226:14)\n      at Test.run (node:internal/test_runner/test:1201:25)\n      at Suite.processPendingSubtests (node:internal/test_runner/test:831:18)\n      at Test.postRun (node:internal/test_runner/test:1330:19)\n      at Test.run (node:internal/test_runner/test:1258:12)\n      at async Suite.processPendingSubtests (node:internal/test_runner/test:831:7) {\n    generatedMessage: true,\n    code: 'ERR_ASSERTION',\n    actual: [ 'Movie ticket', 'Lunch with Sam' ],\n    expected: [ 'Lunch with Sam', 'Movie ticket' ],\n    operator: 'deepStrictEqual',\n    diff: 'simple'\n  }",
+      "verified_after_timeout": false,
+      "metrics": {
+        "requests": 175,
+        "input": 1172134,
+        "output": 137888,
+        "cache_read": 1186512,
+        "ttft_first_ms": 21429,
+        "ttft_avg_ms": 13979.82183908046,
+        "tokens_per_second": 57.457693908983806,
+        "prefix_hit": 0.3371762049193256,
+        "tool_calls": 207,
+        "by_tool": {
+          "bash": 71,
+          "read": 108,
+          "todowrite": 6,
+          "edit": 11,
+          "grep": 8,
+          "write": 3
+        },
+        "failed": 1,
+        "guard_refusals": 0,
+        "duplicate_reads": 71,
+        "noop_edits": 0,
+        "edits": 14,
+        "read_before_edit": 11
+      }
+    }
+  ],
+  "notes": [
+    "Power at start: AC power"
+  ]
+}
