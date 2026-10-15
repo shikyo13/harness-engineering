@@ -33,6 +33,7 @@
 | Agent kernel, durability, recovery | `T/agent-kernel.md` | `S/05` F1, F7; `S/01` Part A; `E/methods/qwen-harness-study/` |
 | Tools and editing | `T/tools-editing.md` | `S/05` F2-F4; `E/results/2026-09-17-tool-search-ab.md`, `2026-09-17-pi-tool-profile.md` |
 | Context engine, compaction, cache | `T/context-engine.md` | `S/05` F3; `S/06` R3-R5; `E/results/2026-09-23-long-horizon-results.md`; `L/2026-09-15-memory-architectures/` |
+| Tool-call protocol reliability (parsers, schemas, streaming, settlement) | `L/2026-10-14-local-tool-protocol-reliability.md` | `E/methods/2026-10-14-local-tool-protocol-ab.md` (test design, not results) |
 | Providers, model tables, local engines | `T/providers-models.md` | `L/2026-09-15-harness-and-engine/` (vLLM, llama.cpp, mlx-serve) |
 | Autonomy: objectives, verification, wakes | `T/autonomy.md` | `S/05` §4; `S/01` Part D (goal plugin) |
 | Multi-agent coordination | `T/multi-agent.md` | `S/05` §2 |
@@ -47,6 +48,7 @@
   `E/results/2026-10-09-qwen-vs-sonnet-ladder.md`, and `L/2026-10-14-proven-advances.md` §1.
 - **What makes long-running work fail, and what fixes it?** `S/05` §4, `T/agent-kernel.md`, `T/autonomy.md`,
   `S/06` R5 (compaction thrash at 24k).
+- **Can a local model's tool failures come from its template, parser, stream or harness rather than its reasoning?** `L/2026-10-14-local-tool-protocol-reliability.md`; same-model evaluation plan in `E/methods/2026-10-14-local-tool-protocol-ab.md` (no Zero Code measurements yet).
 - **What helps local and weaker models?** `S/05` §3, `T/providers-models.md`, `E/results/2026-09-17-pi-tool-profile.md`.
 - **How do I compare harnesses fairly?** `E/methods/2026-09-16-harness-comparison.md`,
   `E/methods/2026-09-17-all-around-leaderboard.md`, `E/methods/qwen-harness-study/` (design, decisions, OpenBench
