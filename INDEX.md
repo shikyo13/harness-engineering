@@ -42,6 +42,10 @@
 | Observability | `T/observability.md` | `S/04` §I |
 | Server and client protocol | `T/` (protocol study, pending) | `S/03` §8 (Antigravity's machine contract) |
 
+## New research program (2026-10-15)
+
+- [High-leverage local harness research](literature/2026-10-15-high-leverage-local-harness-research.md): evidence matrix and technical research agenda covering adaptive supervision, retrieval, cross-task memory, regression-gated harness evolution and harness-to-model distillation. **Published external findings and proposed experiments; no new local results.**
+
 ## By question
 
 - **How much does the harness matter with the model held fixed?** `E/results/SYNTHESIS-2026-09-29.md`,
